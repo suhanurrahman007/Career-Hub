@@ -18,7 +18,7 @@ const Header = () => {
     </>
 
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar lg:px-20 bg-emerald-950">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -44,15 +44,13 @@ const Header = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+        <a className="btn btn-ghost normal-case text-xl">Career Hub</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          {links}
-        </ul>
+        <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <a className="btn bg-orange-950 hover:bg-blue-950">Star Applying</a>
       </div>
     </div>
   );
