@@ -1,4 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { saveJobApplication } from "../utility/LocalStoage";
 
 const JobDetails = () => {
   const jobs = useLoaderData();
@@ -15,7 +16,9 @@ const JobDetails = () => {
     contact_information,
   } = job;
 
-  console.log(id);
+  const handleApply = () =>{
+      saveJobApplication(intId)
+  }
   return (
     <div className="py-5">
       <h2 className="text-2xl font-bold text-center p-7">Job Details</h2>
@@ -81,7 +84,7 @@ const JobDetails = () => {
               {contact_information.address}
             </p>
           </div>
-          <button className="btn mt-7 w-full bg-orange-950">Apply Now</button>
+          <button onClick={handleApply} className="btn mt-7 w-full bg-orange-950">Apply Now</button>
         </div>
       </div>
     </div>
